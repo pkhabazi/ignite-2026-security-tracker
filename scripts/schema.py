@@ -99,16 +99,20 @@ def voice_problems(text):
     return found
 
 
-def load_rows():
-    """Load the YAML file and return the list of rows (raises on bad YAML)."""
+def load_rows(path=None):
+    """Load a YAML file (default data/announcements.yaml) and return its rows.
+
+    Raises on bad YAML or the wrong shape. An empty file gives no rows.
+    """
     import yaml
 
-    with open(DATA, encoding="utf-8") as fh:
+    path = Path(path) if path else DATA
+    with open(path, encoding="utf-8") as fh:
         doc = yaml.safe_load(fh)
     if doc is None:
         return []
     if not isinstance(doc, dict) or "announcements" not in doc:
-        raise ValueError("data/announcements.yaml must be a mapping with an 'announcements' list")
+        raise ValueError(f"{path.name} must be a mapping with an 'announcements' list")
     rows = doc["announcements"] or []
     if not isinstance(rows, list):
         raise ValueError("'announcements' must be a list")

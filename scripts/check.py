@@ -5,6 +5,9 @@ Usage:
     python scripts/check.py              schema, voice rules and every link
     python scripts/check.py --offline    schema and voice rules, no network
     python scripts/check.py --examples   also fetch the links of example rows
+    python scripts/check.py --offline --extra PATH
+                                         also validate rows kept in another file
+                                         (for example outside git); never rendered
 
 What it checks:
     schema    required fields, no unknown fields, unique ids, known area,
@@ -284,31 +287,38 @@ def main():
     ap = argparse.ArgumentParser(description="Validate data/announcements.yaml")
     ap.add_argument("--offline", action="store_true", help="skip the HTTP checks")
     ap.add_argument("--examples", action="store_true", help="also fetch links of example rows")
+    ap.add_argument("--extra", action="append", default=[], metavar="PATH",
+                    help="also validate rows from another YAML file (repeatable); "
+                         "these rows are never rendered into README.md or docs/")
     args = ap.parse_args()
 
     rep = Report()
     try:
         rows = load_rows()
+        extra_rows = []
+        for path in args.extra:
+            extra_rows += load_rows(os.path.expanduser(path))
     except Exception as exc:
-        print(f"check: cannot read data/announcements.yaml: {exc}")
+        print(f"check: cannot read the data: {exc}")
         return 1
 
     seen = set()
-    for i, row in enumerate(rows, 1):
+    for i, row in enumerate(rows + extra_rows, 1):
         check_row(rep, i, row, seen)
     check_templates(rep)
     if not rep.errors:
-        check_outputs(rep, rows)
+        check_outputs(rep, rows)  # tracked rows only: extra rows never reach the outputs
 
     if args.offline:
         links = "links skipped (--offline)"
     elif rep.errors:
         links = "links skipped (fix the errors first)"
     else:
-        links = f"{check_links(rep, rows, args.examples)} link(s) fetched"
+        links = f"{check_links(rep, rows + extra_rows, args.examples)} link(s) fetched"
 
     real = sum(1 for r in rows if isinstance(r, dict) and not r.get("example"))
-    print(f"check: {len(rows)} row(s), {real} real, {len(rows) - real} example; {links}")
+    extra = f", {len(extra_rows)} extra" if args.extra else ""
+    print(f"check: {len(rows)} row(s), {real} real, {len(rows) - real} example{extra}; {links}")
     for msg in rep.errors:
         print(f"  ERROR  {msg}")
     for msg in rep.warnings:
