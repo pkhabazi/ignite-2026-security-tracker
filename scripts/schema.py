@@ -70,8 +70,8 @@ BANNED = [
     "that's fascinating", "best solution", "uniquely positioned", "world-class",
 ]
 DASHES = [
-    ("—", "em dash"),
-    ("–", "en dash"),
+    ("\u2014", "em dash"),
+    ("\u2013", "en dash"),
     ("&mdash;", "em dash entity"),
     ("&ndash;", "en dash entity"),
     ("&#8212;", "em dash entity"),
@@ -92,7 +92,7 @@ def voice_problems(text):
             found.append(label)
     if SPACED_HYPHEN.search(text):
         found.append("hyphen used as a dash")
-    low = text.lower().replace("’", "'").replace("‘", "'")
+    low = text.lower().replace("\u2019", "'").replace("\u2018", "'")
     for phrase in BANNED:
         if re.search(r"\b" + re.escape(phrase), low):
             found.append(f"banned phrase '{phrase}'")
