@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Security announcements from Microsoft Ignite 2026: status, primary source, what changes and what to do Monday.">
+<meta name="generator" content="scripts/render.py">
+<meta name="tracker-examples" content="no">
+<title>Ignite 2026 security tracker</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f6f3;--surface:#fff;--text:#1b1d21;--muted:#575e6b;--border:#dcdfe4;--accent:#0a58a8;
+--ga-bg:#e1f3e6;--ga-fg:#0f5f35;--pub-bg:#e2ecfa;--pub-fg:#154b94;--priv-bg:#eee6fa;--priv-fg:#572c98;--ann-bg:#eaecef;--ann-fg:#3f4652;--ex-bg:#fff1d0;--ex-fg:#6e4500}
+@media (prefers-color-scheme:dark){:root{--bg:#111317;--surface:#1a1d23;--text:#e6e8ec;--muted:#a3aab6;--border:#2d323b;--accent:#82b8ff;
+--ga-bg:#163322;--ga-fg:#94e2b1;--pub-bg:#15294a;--pub-fg:#a2c7ff;--priv-bg:#2a1e43;--priv-fg:#cdb2ff;--ann-bg:#262a31;--ann-fg:#c6cbd4;--ex-bg:#3a2c0e;--ex-fg:#ffd47e}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--accent);text-underline-offset:2px}
+code{font:0.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.wrap{max-width:72rem;margin:0 auto;padding:0 16px}
+header{padding:2rem 0 0.5rem}
+h1{font-size:1.75rem;line-height:1.2;margin:0 0 1rem}
+header p{max-width:46rem;margin:0 0 0.9rem}
+.about{max-width:46rem;margin:0 0 0.9rem}
+.about summary{cursor:pointer;color:var(--accent);font-weight:600;margin:0 0 0.6rem}
+.updated{color:var(--muted);font-size:0.95rem}
+.filters{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 0;margin:0 0 1rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0.5rem 0.75rem;align-items:end}
+.filters label{display:flex;flex-direction:column;font-size:0.8rem;font-weight:600;color:var(--muted);min-width:0}
+.filters select,.filters button{font:inherit;font-size:1rem;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.45rem 0.4rem;min-height:2.75rem}
+.filters select{width:100%;margin-top:0.2rem}
+.filters button{cursor:pointer;justify-self:end}
+.filters select:focus-visible,.filters button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#count{margin:0;font-size:0.9rem;color:var(--muted);align-self:center}
+@media (min-width:48rem){.filters{grid-template-columns:minmax(0,22rem) minmax(0,14rem) 1fr auto}#count{justify-self:end}}
+section.area{margin:0 0 2rem}
+h2{font-size:1.25rem;margin:0 0 0.75rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:0.75rem}
+article.row{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.9rem 1rem;min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:0.4rem 0.6rem;align-items:center;margin:0 0 0.5rem;font-size:0.85rem;color:var(--muted)}
+.status,.ex{font-weight:600;font-size:0.8rem;border-radius:4px;padding:0.1rem 0.45rem}
+.s-ga{background:var(--ga-bg);color:var(--ga-fg)}
+.s-pub{background:var(--pub-bg);color:var(--pub-fg)}
+.s-priv{background:var(--priv-bg);color:var(--priv-fg)}
+.s-ann{background:var(--ann-bg);color:var(--ann-fg)}
+.ex{background:var(--ex-bg);color:var(--ex-fg)}
+h3{font-size:1.05rem;line-height:1.35;margin:0 0 0.6rem;overflow-wrap:anywhere}
+dl{margin:0 0 0.6rem}
+dt{font-size:0.8rem;font-weight:600;color:var(--muted);margin-top:0.4rem}
+dd{margin:0.1rem 0 0}
+.links{margin:0;font-size:0.85rem;color:var(--muted);overflow-wrap:anywhere}
+.empty{padding:1rem 0}
+footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;font-size:0.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Ignite 2026 security tracker</h1>
+<p>Every security announcement from Microsoft Ignite 2026 (17 to 20 November) in one place, written for the people who run Defender, Sentinel, Entra and Purview day to day. The Book of News, the blog posts and the sessions each tell part of the story. What I need is the part that changes a tenant, and what to do about it on Monday.</p>
+<details class="about"><summary>What it covers and how status is verified</summary>
+<p><strong>What it covers.</strong> Agentic SOC and Security Copilot, Project Perception and MDASH, Microsoft Sentinel, Defender XDR and the Defender workloads, Defender for Cloud, security for AI, Entra, Purview and DevSecOps. One row per announcement: status, availability, the primary Microsoft source, the Learn page, related sessions, one line on what changes and one line on what I would do the Monday after.</p>
+<p><strong>How status is verified.</strong> The status (GA, public preview, private preview, announced) is Microsoft&#x27;s own wording in the primary source, never a recap or a third-party post. Each row carries the date it was last checked against that source, and every link is checked before a release. When Microsoft changes a status, the row changes with it.</p>
+<p><strong>Not affiliated with Microsoft.</strong> This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. Found a wrong status or a dead link? Open an issue with the source.</p>
+</details>
+<p class="updated">No announcements yet. Rows are added once Microsoft has published them.</p>
+</header>
+<main>
+
+</main>
+<footer>
+<p>Not affiliated with Microsoft. Generated from <code>data/announcements.yaml</code> by <code>scripts/render.py</code>. MIT licence.</p>
+</footer>
+</div>
+<script>
+(function () {
+  var form = document.getElementById('filters');
+  if (!form) return;
+  var area = document.getElementById('f-area');
+  var status = document.getElementById('f-status');
+  var count = document.getElementById('count');
+  var empty = document.getElementById('empty');
+  var rows = [].slice.call(document.querySelectorAll('article.row'));
+  var sections = [].slice.call(document.querySelectorAll('section.area'));
+  function pick(sel, value) {
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === value) { sel.value = value; return; }
+    }
+  }
+  var params = new URLSearchParams(window.location.search);
+  pick(area, params.get('area') || '');
+  pick(status, params.get('status') || '');
+  function apply() {
+    var a = area.value, s = status.value, shown = 0;
+    rows.forEach(function (r) {
+      var ok = (!a || r.getAttribute('data-area') === a) && (!s || r.getAttribute('data-status') === s);
+      r.hidden = !ok;
+      if (ok) shown++;
+    });
+    sections.forEach(function (sec) {
+      sec.hidden = !sec.querySelector('article.row:not([hidden])');
+    });
+    count.textContent = 'Showing ' + shown + ' of ' + rows.length;
+    empty.hidden = shown !== 0;
+    var p = new URLSearchParams();
+    if (a) p.set('area', a);
+    if (s) p.set('status', s);
+    var q = p.toString();
+    try {
+      history.replaceState(null, '', (q ? '?' + q : window.location.pathname) + window.location.hash);
+    } catch (err) { /* file:// pages may refuse this; filtering still works */ }
+  }
+  area.addEventListener('change', apply);
+  status.addEventListener('change', apply);
+  document.getElementById('f-clear').addEventListener('click', function () {
+    area.value = '';
+    status.value = '';
+    apply();
+  });
+  form.hidden = false;
+  apply();
+})();
+</script>
+</body>
+</html>

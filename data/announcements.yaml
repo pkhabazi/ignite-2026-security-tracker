@@ -1,0 +1,76 @@
+# Ignite 2026 security announcements, one row per announcement.
+#
+# scripts/check.py validates this file. scripts/render.py builds README.md and
+# docs/index.html from it. Edit here, never in the generated files.
+#
+# Fields
+#   id           lowercase slug, unique. Example rows start with "example-".
+#   area         one of:
+#                  Agentic SOC and Security Copilot
+#                  Project Perception and MDASH
+#                  Microsoft Sentinel
+#                  Defender XDR
+#                  Defender for Endpoint, Identity, Office, Cloud Apps
+#                  Defender for Cloud
+#                  Security for AI
+#                  Entra
+#                  Purview
+#                  DevSecOps
+#                  Other
+#   title        the announcement in plain words, one line.
+#   status       GA | Public preview | Private preview | Announced
+#                Microsoft's own wording in the primary source, nothing else.
+#   available    date it is (or becomes) available: YYYY-MM-DD, or YYYY-MM when
+#                Microsoft only names a month. Empty when no date is given.
+#   source_url   the primary Microsoft source (Book of News public page, Microsoft
+#                blog, Tech Community, Learn, GitHub blog or docs). No recaps,
+#                no third-party posts.
+#   learn_url    the Learn page for the feature. Empty when none exists yet.
+#   sessions     Ignite session codes, for example [BRK123, LAB456]. [] when none.
+#   what_changes one line: what changes for someone who runs this day to day.
+#   do_monday    one line: what to do about it on Monday.
+#   verified_at  YYYY-MM-DD, the day status and links were last checked
+#                against source_url.
+#   example      optional. true marks a fake row that renders only with
+#                `python scripts/render.py --examples`.
+
+announcements:
+
+  - id: example-sentinel-placeholder
+    area: Microsoft Sentinel
+    title: "Example row: a Sentinel feature in public preview"
+    status: Public preview
+    available: 2026-11-18
+    source_url: https://www.microsoft.com/en-us/security/blog/
+    learn_url: https://learn.microsoft.com/en-us/azure/sentinel/
+    sessions: [BRK000, LAB000]
+    what_changes: "Placeholder: one line on what a SOC engineer sees differently in the portal."
+    do_monday: "Placeholder: one concrete step, such as which workspace to test it on first."
+    verified_at: 2026-11-15
+    example: true
+
+  - id: example-defender-xdr-placeholder
+    area: Defender XDR
+    title: "Example row: a Defender XDR feature that is generally available"
+    status: GA
+    available: 2026-11
+    source_url: https://techcommunity.microsoft.com/
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/
+    sessions: [BRK001]
+    what_changes: "Placeholder: what the feature replaces or removes from the daily routine."
+    do_monday: "Placeholder: the setting to check, or the rule to review, before rollout."
+    verified_at: 2026-11-15
+    example: true
+
+  - id: example-entra-placeholder
+    area: Entra
+    title: "Example row: an Entra capability in private preview, no date yet"
+    status: Private preview
+    available:
+    source_url: https://www.microsoft.com/en-us/security/blog/
+    learn_url: ""
+    sessions: []
+    what_changes: "Placeholder: who gets access and what it means for identity admins."
+    do_monday: "Placeholder: nothing to deploy yet, note which policies it would touch."
+    verified_at: 2026-11-15
+    example: true
