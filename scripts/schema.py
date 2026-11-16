@@ -31,7 +31,7 @@ AREAS = [
 ]
 
 # Microsoft's own release stages, most mature first.
-STATUSES = ["GA", "Public preview", "Private preview", "Announced"]
+STATUSES = ["GA", "Public preview", "Preview", "Private preview", "Announced"]
 
 REQUIRED = [
     "id", "area", "title", "status", "available", "source_url", "learn_url",

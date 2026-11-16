@@ -61,18 +61,41 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <details class="about"><summary>What it covers and how status is verified</summary>
 <p><strong>What it covers.</strong> Agentic SOC and Security Copilot, Project Perception and MDASH, Microsoft Sentinel, Defender XDR and the Defender workloads, Defender for Cloud, security for AI, Entra, Purview and DevSecOps. One row per announcement: status, availability, the primary Microsoft source, the Learn page, related sessions, one line on what changes and one line on what I would do the Monday after.</p>
 <p><strong>The run-up.</strong> The tracker starts with what Microsoft shipped or announced in the months before Ignite, where it changes a tenant now or sets a date you have to plan for. Each row links the post it came from, so its date is in the source.</p>
-<p><strong>How status is verified.</strong> The status (GA, public preview, private preview, announced) is Microsoft&#x27;s own wording in the primary source, never a recap or a third-party post. Announced means Microsoft named it without a preview or GA status, which includes dated retirements. Each row carries the date it was last checked against that source, and every link is checked before a release. When Microsoft changes a status, the row changes with it.</p>
+<p><strong>How status is verified.</strong> The status (GA, public preview, preview, private preview, announced) is Microsoft&#x27;s own wording in the primary source, never a recap or a third-party post. Preview means the source says preview without saying public or private. Announced means Microsoft named it without a preview or GA status, which includes dated retirements. Each row carries the date it was last checked against that source, and every link is checked before a release. When Microsoft changes a status, the row changes with it.</p>
 <p><strong>Not affiliated with Microsoft.</strong> This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. Found a wrong status or a dead link? Open an issue with the source.</p>
 </details>
-<p class="updated">Last updated 2026-11-16, 36 announcements.</p>
+<p class="updated">Last updated 2026-11-16, 42 announcements.</p>
 </header>
 <main>
 <form class="filters" id="filters" hidden onsubmit="return false">
-<label for="f-area">Area<select id="f-area"><option value="">All areas (36)</option><option value="project-perception-and-mdash">Project Perception and MDASH (3)</option><option value="microsoft-sentinel">Microsoft Sentinel (4)</option><option value="defender-xdr">Defender XDR (3)</option><option value="defender-for-endpoint-identity-office-cloud-apps">Defender for Endpoint, Identity, Office, Cloud Apps (5)</option><option value="defender-for-cloud">Defender for Cloud (2)</option><option value="security-for-ai">Security for AI (4)</option><option value="entra">Entra (6)</option><option value="purview">Purview (3)</option><option value="devsecops">DevSecOps (6)</option></select></label>
-<label for="f-status">Status<select id="f-status"><option value="">All statuses (36)</option><option value="ga">GA (14)</option><option value="public-preview">Public preview (12)</option><option value="private-preview">Private preview (1)</option><option value="announced">Announced (9)</option></select></label>
+<label for="f-area">Area<select id="f-area"><option value="">All areas (42)</option><option value="agentic-soc-and-security-copilot">Agentic SOC and Security Copilot (2)</option><option value="project-perception-and-mdash">Project Perception and MDASH (3)</option><option value="microsoft-sentinel">Microsoft Sentinel (4)</option><option value="defender-xdr">Defender XDR (5)</option><option value="defender-for-endpoint-identity-office-cloud-apps">Defender for Endpoint, Identity, Office, Cloud Apps (6)</option><option value="defender-for-cloud">Defender for Cloud (2)</option><option value="security-for-ai">Security for AI (5)</option><option value="entra">Entra (6)</option><option value="purview">Purview (3)</option><option value="devsecops">DevSecOps (6)</option></select></label>
+<label for="f-status">Status<select id="f-status"><option value="">All statuses (42)</option><option value="ga">GA (14)</option><option value="public-preview">Public preview (12)</option><option value="preview">Preview (6)</option><option value="private-preview">Private preview (1)</option><option value="announced">Announced (9)</option></select></label>
 <p id="count" aria-live="polite"></p>
 <button type="button" id="f-clear">Show all</button>
 </form>
+<section class="area" data-area="agentic-soc-and-security-copilot" aria-labelledby="h-agentic-soc-and-security-copilot">
+<h2 id="h-agentic-soc-and-security-copilot">Agentic SOC and Security Copilot</h2>
+<div class="cards">
+<article class="row" id="isoc-playbook-generator" data-area="agentic-soc-and-security-copilot" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation">Playbook Generator: code-based playbooks from natural language in Defender</a></h3>
+<dl>
+<dt>What changes</dt><dd>Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. Part of ISOC automation.</dd>
+<dt>Do Monday</dt><dd>Generate one playbook for a response you now run by hand and review the code line by line. Microsoft says generated code needs manual validation.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+<article class="row" id="triage-agent-identity-cloud-alerts" data-area="agentic-soc-and-security-copilot" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent">Security Alert Triage Agent extends from phishing to identity and cloud alerts</a></h3>
+<dl>
+<dt>What changes</dt><dd>The Phishing Triage Agent becomes the Security Alert Triage Agent and starts on a subset of identity and cloud alerts, containers first. Email triage stays GA.</dd>
+<dt>Do Monday</dt><dd>If you already run the phishing agent there is nothing to install. Compare its verdicts on container alerts with your analysts&#x27; for a week before you trust them.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+</div>
+</section>
 <section class="area" data-area="project-perception-and-mdash" aria-labelledby="h-project-perception-and-mdash">
 <h2 id="h-project-perception-and-mdash">Project Perception and MDASH</h2>
 <div class="cards">
@@ -176,6 +199,24 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/security-exposure-management/manage-posture-policies-defender">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
+<article class="row" id="disruption-device-isolation" data-area="defender-xdr" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span><span>Available 2026-05</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/whats-new">Automatic attack disruption can isolate compromised devices</a></h3>
+<dl>
+<dt>What changes</dt><dd>When incident analysis marks a device as an active foothold, Defender isolates it from the network for a limited time and keeps it connected to security services.</dd>
+<dt>Do Monday</dt><dd>Agree with the owners of critical servers what happens when Defender isolates one of their machines, before it does.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption">Learn</a> <span aria-hidden="true">&middot;</span> Sessions: LTG1227, BRK333 <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+<article class="row" id="defender-incident-cases" data-area="defender-xdr" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases">Incident cases replace the incident queue in the Defender portal</a></h3>
+<dl>
+<dt>What changes</dt><dd>Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident queue stays during the preview.</dd>
+<dt>Do Monday</dt><dd>Have one analyst work a shift from Cases &gt; Incident, then update the runbooks that still point to the legacy queue.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
 </div>
 </section>
 <section class="area" data-area="defender-for-endpoint-identity-office-cloud-apps" aria-labelledby="h-defender-for-endpoint-identity-office-cloud-apps">
@@ -207,6 +248,15 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <dt>Do Monday</dt><dd>Run the AgentsInfo inventory query and list the agents that auto-approve their own actions on your critical devices.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-endpoint/local-agent-discovery-overview">Learn</a> <span aria-hidden="true">&middot;</span> Sessions: BRK339, LTG1237 <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+<article class="row" id="mde-ai-agent-runtime-protection" data-area="defender-for-endpoint-identity-office-cloud-apps" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview">AI agent runtime protection in Defender for Endpoint</a></h3>
+<dl>
+<dt>What changes</dt><dd>Defender inspects what enters and leaves a local agent&#x27;s reasoning, catches prompt injection, and blocks the action before it runs where the inspection method allows it.</dd>
+<dt>Do Monday</dt><dd>Check the support matrix for the agents your developers run, then turn it on in audit for a pilot group before you let it block.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview">Learn</a> <span aria-hidden="true">&middot;</span> Sessions: BRK340 <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
 <article class="row" id="mdca-file-policies-retire" data-area="defender-for-endpoint-identity-office-cloud-apps" data-status="announced">
 <p class="meta"><span class="status s-ann">Announced</span></p>
@@ -280,6 +330,15 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <dt>Do Monday</dt><dd>Count agent identities with no sponsor or no recent activity, then start with a policy that disables rather than deletes.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/entra/id-governance/agent-lifecycle-policies">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+<article class="row" id="foundry-agent-guardrails" data-area="security-for-ai" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">Foundry guardrails for agents, including tool call and tool response checks</a></h3>
+<dl>
+<dt>What changes</dt><dd>Guardrails scan user input, tool calls, tool responses and output. An agent&#x27;s guardrail fully overrides the guardrail of its underlying model.</dd>
+<dt>Do Monday</dt><dd>List your Foundry agents and their guardrails, and check each agent&#x27;s guardrail is at least as strict as its model&#x27;s, since it replaces it.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
 <article class="row" id="ai-dynamic-agent-controls" data-area="security-for-ai" data-status="announced">
 <p class="meta"><span class="status s-ann">Announced</span></p>

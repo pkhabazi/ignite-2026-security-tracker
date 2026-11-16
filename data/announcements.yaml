@@ -18,8 +18,11 @@
 #                  DevSecOps
 #                  Other
 #   title        the announcement in plain words, one line.
-#   status       GA | Public preview | Private preview | Announced
+#   status       GA | Public preview | Preview | Private preview | Announced
 #                Microsoft's own wording in the primary source, nothing else.
+#                Preview: the source says preview without saying public or
+#                private. Announced: named without any preview or GA status,
+#                including dated retirements.
 #   available    date it is (or becomes) available: YYYY-MM-DD, or YYYY-MM when
 #                Microsoft only names a month. Empty when no date is given.
 #   source_url   the primary Microsoft source (Book of News public page, Microsoft
@@ -486,6 +489,80 @@ announcements:
     sessions: []
     what_changes: "An agentic scan of the latest commit on the default branch, covering languages CodeQL does not. Findings sit next to your CodeQL alerts."
     do_monday: "Run it on one repository where CodeQL covers little, and compare its findings with your open alerts before you trust it."
+    verified_at: 2026-11-16
+
+  # Preview: the source says preview without saying public or private. Verified 2026-11-16.
+
+  - id: triage-agent-identity-cloud-alerts
+    area: Agentic SOC and Security Copilot
+    title: "Security Alert Triage Agent extends from phishing to identity and cloud alerts"
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent
+    sessions: []
+    what_changes: "The Phishing Triage Agent becomes the Security Alert Triage Agent and starts on a subset of identity and cloud alerts, containers first. Email triage stays GA."
+    do_monday: "If you already run the phishing agent there is nothing to install. Compare its verdicts on container alerts with your analysts' for a week before you trust them."
+    verified_at: 2026-11-16
+
+  - id: isoc-playbook-generator
+    area: Agentic SOC and Security Copilot
+    title: "Playbook Generator: code-based playbooks from natural language in Defender"
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
+    sessions: []
+    what_changes: "Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. Part of ISOC automation."
+    do_monday: "Generate one playbook for a response you now run by hand and review the code line by line. Microsoft says generated code needs manual validation."
+    verified_at: 2026-11-16
+
+  - id: defender-incident-cases
+    area: Defender XDR
+    title: "Incident cases replace the incident queue in the Defender portal"
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
+    sessions: []
+    what_changes: "Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident queue stays during the preview."
+    do_monday: "Have one analyst work a shift from Cases > Incident, then update the runbooks that still point to the legacy queue."
+    verified_at: 2026-11-16
+
+  - id: disruption-device-isolation
+    area: Defender XDR
+    title: "Automatic attack disruption can isolate compromised devices"
+    status: Preview
+    available: 2026-05
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/whats-new
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption
+    sessions: [LTG1227, BRK333]
+    what_changes: "When incident analysis marks a device as an active foothold, Defender isolates it from the network for a limited time and keeps it connected to security services."
+    do_monday: "Agree with the owners of critical servers what happens when Defender isolates one of their machines, before it does."
+    verified_at: 2026-11-16
+
+  - id: mde-ai-agent-runtime-protection
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "AI agent runtime protection in Defender for Endpoint"
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview
+    learn_url: https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview
+    sessions: [BRK340]
+    what_changes: "Defender inspects what enters and leaves a local agent's reasoning, catches prompt injection, and blocks the action before it runs where the inspection method allows it."
+    do_monday: "Check the support matrix for the agents your developers run, then turn it on in audit for a pilot group before you let it block."
+    verified_at: 2026-11-16
+
+  - id: foundry-agent-guardrails
+    area: Security for AI
+    title: "Foundry guardrails for agents, including tool call and tool response checks"
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview
+    learn_url: https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview
+    sessions: []
+    what_changes: "Guardrails scan user input, tool calls, tool responses and output. An agent's guardrail fully overrides the guardrail of its underlying model."
+    do_monday: "List your Foundry agents and their guardrails, and check each agent's guardrail is at least as strict as its model's, since it replaces it."
     verified_at: 2026-11-16
 
   # Examples (render only with --examples)

@@ -11,7 +11,8 @@ Usage:
 
 What it checks:
     schema    required fields, no unknown fields, unique ids, known area,
-              status is one of GA / Public preview / Private preview / Announced,
+              status is one of GA / Public preview / Preview / Private preview /
+              Announced,
               dates are real dates, URLs are https on a Microsoft host
     voice     title, what_changes, do_monday and the README templates have no
               em or en dash (also as HTML entity), no hyphen used as a dash,
@@ -48,6 +49,7 @@ TIMEOUT = 20
 STATUS_WORDING = {
     "GA": ["generally available", "general availability", "now available"],
     "Public preview": ["public preview"],
+    "Preview": ["preview"],
     "Private preview": ["private preview", "limited preview"],
 }
 

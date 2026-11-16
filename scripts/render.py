@@ -21,6 +21,7 @@ from schema import (AREAS, INDEX, README, STATUSES, TEMPLATES, TITLE, as_text,
 STATUS_CLASS = {
     "GA": "s-ga",
     "Public preview": "s-pub",
+    "Preview": "s-pub",
     "Private preview": "s-priv",
     "Announced": "s-ann",
 }
