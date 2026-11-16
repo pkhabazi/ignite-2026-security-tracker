@@ -36,6 +36,460 @@
 
 announcements:
 
+  # Run-up to Ignite 2026: public items verified against their primary source on 2026-11-16.
+
+  # Project Perception and MDASH
+
+  - id: perception-limited-public-preview
+    area: Project Perception and MDASH
+    title: "Project Perception, Microsoft's multi-agent security system, in limited public preview"
+    status: Public preview
+    available: 2026-08-03
+    source_url: https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/
+    learn_url: https://learn.microsoft.com/en-us/security/agentic-security/agentic-security-get-started
+    sessions: [BRK323, BRK318, LTG1225]
+    what_changes: "A Perception area in the Defender portal where red, blue and green team agents work through playbooks with approval gates. Learn calls it limited and invitation only."
+    do_monday: "Watch BRK323, the Perception roadmap session. Outside the invitation-only preview, plan nothing around it yet."
+    verified_at: 2026-11-16
+
+  - id: mdash-limited-private-preview
+    area: Project Perception and MDASH
+    title: "Codename MDASH, a multi-model agentic vulnerability scanner, in limited private preview"
+    status: Private preview
+    available: ""
+    source_url: https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/
+    learn_url: ""
+    sessions: []
+    what_changes: "Agents across several models find, debate and prove exploitable bugs in code. Microsoft security engineering uses it and a small set of customers tests it."
+    do_monday: "If you own code security, sign up for the private preview from the announcement post and pick the one repository you would test it on."
+    verified_at: 2026-11-16
+
+  - id: perception-guardian-agents-playbooks
+    area: Project Perception and MDASH
+    title: "Guardian Agents and new Playbooks in Project Perception to secure AI agents"
+    status: Announced
+    available: ""
+    source_url: https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
+    learn_url: ""
+    sessions: [BRK337]
+    what_changes: "Perception gets Guardian Agents and Playbooks aimed at AI agents as insiders, inside policy and approval boundaries that people set. No preview or GA status yet."
+    do_monday: "Nothing to switch on yet. Watch BRK337 and wait for a status before you plan around it."
+    verified_at: 2026-11-16
+
+  # Microsoft Sentinel
+
+  - id: sentinel-unified-data-management
+    area: Microsoft Sentinel
+    title: "Unified Data Management: one Data & connectors area for Sentinel in the Defender portal"
+    status: Public preview
+    available: 2026-10-20
+    source_url: https://techcommunity.microsoft.com/blog/microsoftsentinelblog/manage-all-your-microsoft-sentinel-data-in-one-place-with-unified-data-managemen/4565940
+    learn_url: https://learn.microsoft.com/en-us/azure/sentinel/manage-data-overview
+    sessions: []
+    what_changes: "Connector health, ingestion, tables, transformations and retention in one place under Setup & configuration. Commercial cloud only."
+    do_monday: "Check you have URBAC and the Data (manage) permission, then use the Overview tab to find the connectors that stopped sending."
+    verified_at: 2026-11-16
+
+  - id: sentinel-cross-tenant-delegated-access
+    area: Microsoft Sentinel
+    title: "Cross-tenant delegated access in Defender for Sentinel and XDR operations"
+    status: GA
+    available: 2026-10
+    source_url: https://techcommunity.microsoft.com/blog/microsoftsentinelblog/what%E2%80%99s-new-in-microsoft-sentinel-october-2026/4568804
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/governance-relationships
+    sessions: []
+    what_changes: "Run security operations in customer tenants from your home tenant account through Entra Tenant Governance relationships, without B2B guest accounts."
+    do_monday: "MSSPs and multitenant teams: map today's guest accounts to security groups, then pilot one governance relationship with a single tenant."
+    verified_at: 2026-11-16
+
+  - id: sentinel-asim-emailevent-schema
+    area: Microsoft Sentinel
+    title: "ASIM EmailEvent schema for email delivery and inspection events"
+    status: GA
+    available: 2026-10
+    source_url: https://techcommunity.microsoft.com/blog/microsoftsentinelblog/what%E2%80%99s-new-in-microsoft-sentinel-october-2026/4568804
+    learn_url: ""
+    sessions: []
+    what_changes: "One normalized structure for email events across supported email sources, so one detection can cover more than one mail product."
+    do_monday: "If you run a mail gateway next to Defender for Office 365, rewrite one email detection against EmailEvent and compare the results."
+    verified_at: 2026-11-16
+
+  - id: sentinel-azure-portal-retirement
+    area: Microsoft Sentinel
+    title: "Sentinel leaves the Azure portal after 31 March 2027"
+    status: Announced
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/azure/sentinel/microsoft-sentinel-defender-portal
+    learn_url: https://learn.microsoft.com/en-us/azure/sentinel/move-to-defender
+    sessions: []
+    what_changes: "After that date Sentinel is supported only in the Defender portal. The Azure portal gets maintenance and parity only, no new features."
+    do_monday: "If a workspace still runs only in the Azure portal, connect it to the Defender portal and test your automation and workbooks there first."
+    verified_at: 2026-11-16
+
+  # Defender XDR
+
+  - id: defender-isoc-public-preview
+    area: Defender XDR
+    title: "ISOC: SIEM capabilities in Defender for E5, E7 and Defender Suite tenants"
+    status: Public preview
+    available: 2026-09-23
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/integrated-security-operations-center-in-microsoft-defender/4559097
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/isoc-overview
+    sessions: [THR876, THR1016]
+    what_changes: "Cases, workbooks and playbook generation in Defender without a Sentinel workspace. Included retention goes from 30 to 90 days from 15 November 2026."
+    do_monday: "Check that Defender data retention now shows 90 days, since Learn still says 30. Then price the $2.40 per GB meter for the sources you want to add."
+    verified_at: 2026-11-16
+
+  - id: defender-identity-security-dashboard
+    area: Defender XDR
+    title: "Identity Security dashboard and Coverage & Maturity in Defender"
+    status: GA
+    available: 2026-09
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/whats-new
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/identity-security/coverage-maturity
+    sessions: []
+    what_changes: "One view of identity risk and posture across on-premises, cloud, SaaS, identity providers and partner tools, with coverage gaps and the actions to close them."
+    do_monday: "Open Coverage & Maturity and fix the top deployment gap it lists before you add any new identity tooling."
+    verified_at: 2026-11-16
+
+  - id: defender-exposure-posture-policies
+    area: Defender XDR
+    title: "Posture policies and recommendation exemptions in Exposure Management for Azure"
+    status: Public preview
+    available: 2026-10-28
+    source_url: https://learn.microsoft.com/en-us/security-exposure-management/whats-new
+    learn_url: https://learn.microsoft.com/en-us/security-exposure-management/manage-posture-policies-defender
+    sessions: []
+    what_changes: "Custom posture policies on top of the Defender for Cloud baseline, and exemptions with a review period and an expiry date, for environments managed in Defender."
+    do_monday: "Move one long-standing Azure exemption into Defender with an owner and an expiry date, and watch how the score treats it."
+    verified_at: 2026-11-16
+
+  # Defender for Endpoint, Identity, Office, Cloud Apps
+
+  - id: mde-local-ai-agent-discovery
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Discovery of local AI agents and their MCP servers on Windows and macOS"
+    status: GA
+    available: 2026-10-29
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/now-generally-available-discover-local-ai-agents-with-microsoft-defender/4568216
+    learn_url: https://learn.microsoft.com/en-us/defender-endpoint/local-agent-discovery-overview
+    sessions: [BRK339, LTG1237]
+    what_changes: "More than 50 supported agents and MCP servers show up under Assets > AI agents and in the AgentsInfo table. Needs MDE Plan 2; risk scores need E7 or Agent 365."
+    do_monday: "Run the AgentsInfo inventory query and list the agents that auto-approve their own actions on your critical devices."
+    verified_at: 2026-11-16
+
+  - id: mde-linux-antivirus-audit-mode
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Antivirus audit mode for Defender for Endpoint on Linux"
+    status: GA
+    available: 2026-10
+    source_url: https://learn.microsoft.com/en-us/defender-endpoint/whats-new-in-microsoft-defender-endpoint
+    learn_url: https://learn.microsoft.com/en-us/defender-endpoint/linux-preferences
+    sessions: []
+    what_changes: "Detection and alerts on Linux without quarantining files or killing processes, so you can measure detection and performance on sensitive workloads first."
+    do_monday: "Put the Linux servers you kept out of real-time protection into audit mode (version 101.26062.0007 or later) and review a week of alerts."
+    verified_at: 2026-11-16
+
+  - id: mdi-sensor-v3-without-mde
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Defender for Identity sensor v3.x activation without Defender for Endpoint"
+    status: GA
+    available: 2026-10
+    source_url: https://learn.microsoft.com/en-us/defender-for-identity/whats-new
+    learn_url: https://learn.microsoft.com/en-us/defender-for-identity/deploy/activate-sensor
+    sessions: []
+    what_changes: "Activate the v3.x sensor on domain controllers, AD FS, AD CS and Entra Connect servers on Windows Server 2019 or later without onboarding them to MDE."
+    do_monday: "List the identity servers you kept off MDE and plan v3.x for them. Servers on Windows Server 2016 or earlier stay on v2.x."
+    verified_at: 2026-11-16
+
+  - id: mdi-automatic-sensor-activation
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Defender for Identity turns on sensor v3.x activation and Windows auditing by default"
+    status: Announced
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-for-identity/whats-new
+    learn_url: https://learn.microsoft.com/en-us/defender-for-identity/deploy/activate-sensor
+    sessions: []
+    what_changes: "Licensed tenants see a 30-day banner on Sensor management, then both settings switch on in a gradual rollout, also where they are set to Off."
+    do_monday: "Look for the banner on the Sensor management tab. Opt out during the notice period if auditing changes on your DCs need change approval first."
+    verified_at: 2026-11-16
+
+  - id: mdca-file-policies-retire
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Defender for Cloud Apps file policies retire on 6 January 2027"
+    status: Announced
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-cloud-apps/release-notes
+    learn_url: ""
+    sessions: []
+    what_changes: "File-based data protection moves to Purview. File policies stop on that date and need to be rebuilt as Purview DLP or auto-labeling policies."
+    do_monday: "List your file policies and the governance actions each one takes, then check them against the parity gaps in Microsoft's migration guide."
+    verified_at: 2026-11-16
+
+  # Defender for Cloud
+
+  - id: mdc-plan-management-defender-portal
+    area: Defender for Cloud
+    title: "Defender for Cloud plan management in the Defender portal"
+    status: Public preview
+    available: 2026-10-20
+    source_url: https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes
+    learn_url: https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-portal/plan-management-changes-defender-portal
+    sessions: []
+    what_changes: "Enable plans per scope in the Defender portal for Azure commercial. Moving a subscription changes how plans bill, and Defender for DNS is not carried over."
+    do_monday: "Before you move a subscription, read the plan mapping table and enable Defender for Servers Plan 2 where you rely on DNS protection."
+    verified_at: 2026-11-16
+
+  - id: mdc-defender-workload-unit
+    area: Defender for Cloud
+    title: "Defender Workload Unit (DWU): one billing unit across Defender for Cloud plans"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/cloud-security-billing-simplified-introducing-the-defender-workload-unit/4559743
+    learn_url: ""
+    sessions: []
+    what_changes: "Usage across workloads converts to one billing unit with one unit price and one place to estimate and track cost. Initial support is Azure only."
+    do_monday: "Run the Cloud Security Cost Estimator against your current plans so you know what DWU means for your bill before it becomes the default."
+    verified_at: 2026-11-16
+
+  # Security for AI
+
+  - id: ai-microsoft-execution-containers
+    area: Security for AI
+    title: "Microsoft Execution Containers (MXC): operating system containment for AI agents"
+    status: GA
+    available: 2026-11
+    source_url: https://www.microsoft.com/en-us/security/blog/2026/11/05/whats-new-in-microsoft-security-november-2026/
+    learn_url: https://learn.microsoft.com/en-us/windows/apps/develop/mxc/
+    sessions: []
+    what_changes: "An open-source SDK runs agent tools and generated commands with only the files, network and UI access a policy allows, on Windows, Linux and macOS."
+    do_monday: "If you build or host agents, run the quickstart on one tool your agent calls and use Learning Mode to draft its policy."
+    verified_at: 2026-11-16
+
+  - id: ai-dynamic-agent-controls
+    area: Security for AI
+    title: "Dynamic Permissions, Dynamic Agent Risk and Dynamic Conditional Access for agents"
+    status: Announced
+    available: ""
+    source_url: https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
+    learn_url: ""
+    sessions: []
+    what_changes: "Task-scoped agent permissions under an org-wide ceiling, an agent risk score from identity, data, endpoint, cloud and network signals, and Conditional Access that acts on it."
+    do_monday: "No status or docs yet. List which agents run with a user's full permissions today; that is the list these controls are meant to shrink."
+    verified_at: 2026-11-16
+
+  - id: ai-defender-agent-threat-detection
+    area: Security for AI
+    title: "Defender threat detection for agents managed in Agent 365"
+    status: Public preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/security-for-ai/ai-agent-detection-protection
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/security-for-ai/ai-agent-detection-protection
+    sessions: []
+    what_changes: "Alerts for jailbreak attempts, indirect prompt injection, credential leakage and suspicious access across Agent 365 managed agents. Only published Foundry agents count."
+    do_monday: "Check which of your agents send observability data to Microsoft 365, and agree who triages these alerts: the SOC or the team that owns the agent."
+    verified_at: 2026-11-16
+
+  - id: ai-agent-id-lifecycle-policies
+    area: Security for AI
+    title: "Lifecycle policies for Entra Agent ID identities"
+    status: Public preview
+    available: 2026-10
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/what%E2%80%99s-new-in-microsoft-entra-november-2026/4556457
+    learn_url: https://learn.microsoft.com/en-us/entra/id-governance/agent-lifecycle-policies
+    sessions: []
+    what_changes: "Reconfirmation intervals, minimum sponsors and inactivity monitoring that disable or delete agent identities that outlive their purpose."
+    do_monday: "Count agent identities with no sponsor or no recent activity, then start with a policy that disables rather than deletes."
+    verified_at: 2026-11-16
+
+  # Entra
+
+  - id: entra-sms-voice-mfa-retirement
+    area: Entra
+    title: "Microsoft-delivered SMS and voice MFA retires on 1 February 2027"
+    status: Announced
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sms-voice-retirement
+    learn_url: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sms-voice-retirement
+    sessions: []
+    what_changes: "Users who still rely on SMS or voice need another method or a telephony provider. Global Administrators and external users follow on 1 July 2027."
+    do_monday: "Pull the list of active SMS and voice users and start with the ones who have no other method registered."
+    verified_at: 2026-11-16
+
+  - id: entra-choose-your-own-telephony
+    area: Entra
+    title: "Choose Your Own Telephony provider (CYOT) for SMS and voice MFA"
+    status: GA
+    available: 2026-10-30
+    source_url: https://learn.microsoft.com/en-us/entra/identity/authentication/phone-providers-faq
+    learn_url: https://learn.microsoft.com/en-us/entra/identity/authentication/phone-providers-faq
+    sessions: []
+    what_changes: "Keep SMS and voice MFA after the retirement by routing it through Soprano, Telesign or Infobip. You pay the provider and run the Azure Function yourself."
+    do_monday: "Only for users with a real need for SMS or voice: pick a provider and have it working before 1 February 2027."
+    verified_at: 2026-11-16
+
+  - id: entra-whfb-psso-standalone-mfa
+    area: Entra
+    title: "Windows Hello for Business and macOS Platform SSO count as standalone MFA"
+    status: GA
+    available: 2026-11
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/what%E2%80%99s-new-in-microsoft-entra-november-2026/4556457
+    learn_url: ""
+    sessions: []
+    what_changes: "These device-bound credentials now satisfy step-up prompts, Authentication Strength and sign-in frequency without an extra passkey. Rollout begins early November 2026."
+    do_monday: "Review the Authentication Strength policies you built around passkeys only and decide whether WHfB and Platform SSO should pass them."
+    verified_at: 2026-11-16
+
+  - id: entra-passkey-first-mfa-method
+    area: Entra
+    title: "Passkey or passwordless sign-in as a user's first MFA method"
+    status: GA
+    available: 2026-10
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/what%E2%80%99s-new-in-microsoft-entra-november-2026/4556457
+    learn_url: ""
+    sessions: []
+    what_changes: "New users can start on a phishing-resistant method from day one instead of registering a weaker method first. Rollout continues through February 2027."
+    do_monday: "Update your onboarding instructions so new joiners register a passkey first, and drop SMS from the first-day steps."
+    verified_at: 2026-11-16
+
+  - id: entra-universal-cae-device-risk
+    area: Entra
+    title: "Universal CAE acts on device and user risk signals"
+    status: GA
+    available: 2026-10
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/what%E2%80%99s-new-in-microsoft-entra-november-2026/4556457
+    learn_url: https://learn.microsoft.com/en-us/entra/global-secure-access/concept-universal-continuous-access-evaluation
+    sessions: []
+    what_changes: "When a device is disabled or noncompliant, or user risk is high, the Global Secure Access client forces reauthentication within two minutes."
+    do_monday: "Pair it with the matching Conditional Access policies for compliant devices and high user risk. Without them the reauthentication is silent."
+    verified_at: 2026-11-16
+
+  - id: entra-ca-policy-plans
+    area: Entra
+    title: "Conditional Access policy plans: shared conditions across rules"
+    status: Public preview
+    available: 2026-11-04
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/scale-access-controls-with-microsoft-entra-conditional-access-policy-plans/4569647
+    learn_url: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-plans
+    sessions: []
+    what_changes: "Group policies around one objective with shared conditions and per-rule controls. Existing policies keep enforcing; migrated rules start Off. Entra ID P1 or P2."
+    do_monday: "Pick one cluster of policies that protect the same apps, migrate it to a plan, and run the new rules in report-only next to the old ones."
+    verified_at: 2026-11-16
+
+  # Purview
+
+  - id: purview-endpoint-dlp-ftp-sftp
+    area: Purview
+    title: "Endpoint DLP for FTP and SFTP transfers"
+    status: GA
+    available: 2026-10
+    source_url: https://learn.microsoft.com/en-us/purview/whats-new
+    learn_url: https://learn.microsoft.com/en-us/purview/endpoint-dlp-ftp-sftp-short
+    sessions: []
+    what_changes: "Endpoint DLP rules can audit, block or allow sensitive files sent over FTP and SFTP from managed Windows devices, with events in Activity explorer."
+    do_monday: "Add FTP and SFTP transfers to an existing device rule in audit only for a pilot group, then read Activity explorer before you block."
+    verified_at: 2026-11-16
+
+  - id: purview-data-governance-retirement
+    area: Purview
+    title: "Purview Data Governance retires; support ends 12 November 2027"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/a-next-step-in-the-evolution-of-the-microsoft-data-governance-strategy/4572227
+    learn_url: ""
+    sessions: []
+    what_changes: "Data governance moves to Microsoft Fabric and the OneLake catalog. Purview stays focused on data security and compliance."
+    do_monday: "If you depend on Purview data governance, list what relies on it. Regulated or contract-bound? Talk to your account team now, as Microsoft advises."
+    verified_at: 2026-11-16
+
+  - id: purview-data-risk-graph-retirement
+    area: Purview
+    title: "Insider Risk data risk graph retires on 24 November 2026"
+    status: Announced
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/purview/purview-sentinel
+    learn_url: https://learn.microsoft.com/en-us/purview/purview-sentinel
+    sessions: []
+    what_changes: "The data risk graph experience in Insider Risk Management, built on Sentinel graph, is no longer available after that date."
+    do_monday: "If analysts use the graph in investigations, tell them now and agree what replaces that step before 24 November."
+    verified_at: 2026-11-16
+
+  # DevSecOps
+
+  - id: ghas-public-monitoring-enterprises
+    area: DevSecOps
+    title: "Public monitoring: alerts when your enterprise's secrets leak anywhere on public GitHub"
+    status: GA
+    available: 2026-10-28
+    source_url: https://github.blog/changelog/2026-10-28-public-monitoring-for-enterprises-generally-available/
+    learn_url: ""
+    sessions: []
+    what_changes: "GitHub watches the public surface of github.com for your enterprise's secrets and alerts you. Included with Secret Protection at no extra cost."
+    do_monday: "Enable it for the enterprise and decide who triages these alerts, since the leak can sit in a repository you do not own."
+    verified_at: 2026-11-16
+
+  - id: ghas-push-protection-ai-secrets
+    area: DevSecOps
+    title: "Push protection for secrets without a predefined pattern"
+    status: Public preview
+    available: 2026-10-28
+    source_url: https://github.blog/changelog/2026-10-28-push-protection-beyond-predefined-secret-patterns/
+    learn_url: ""
+    sessions: []
+    what_changes: "A classifier blocks secrets with no defined format at push time. Off by default, needs AI-detected secret scanning, and uses AI credits."
+    do_monday: "Turn it on for one busy repository and watch bypass requests and AI credit use for a week."
+    verified_at: 2026-11-16
+
+  - id: ghas-code-scanning-ai-applications
+    area: DevSecOps
+    title: "Code scanning for AI applications and agents"
+    status: Public preview
+    available: 2026-10-28
+    source_url: https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/
+    learn_url: ""
+    sessions: []
+    what_changes: "Pull request scans flag indirect prompt injection, sensitive information disclosure and excessive agency in AI and agent code. Needs GHAS, not on GHES."
+    do_monday: "Enable it on the repository of your most exposed agent and read the first findings with the developers who wrote it."
+    verified_at: 2026-11-16
+
+  - id: ghas-agentic-autofix
+    area: DevSecOps
+    title: "Agentic autofix for code scanning alerts"
+    status: GA
+    available: 2026-10-15
+    source_url: https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/
+    learn_url: ""
+    sessions: []
+    what_changes: "Assign an alert to Copilot and it proposes a fix, reruns CodeQL to confirm the alert closes, and opens a draft pull request."
+    do_monday: "Assign a few of your oldest open code scanning alerts to it and review the draft pull requests like any other change."
+    verified_at: 2026-11-16
+
+  - id: ghas-secret-scanning-actions-logs
+    area: DevSecOps
+    title: "Secret scanning of GitHub Actions workflow logs"
+    status: Public preview
+    available: 2026-11-09
+    source_url: https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/
+    learn_url: ""
+    sessions: []
+    what_changes: "Completed workflow logs are scanned for provider patterns and findings land in the secret scanning alert list. Off by default behind an enterprise policy."
+    do_monday: "Enable the policy, then watch your noisiest pipelines first. Only runs that complete after you enable it are scanned."
+    verified_at: 2026-11-16
+
+  - id: ghas-ai-scan-repositories
+    area: DevSecOps
+    title: "AI Scan for repositories"
+    status: Public preview
+    available: 2026-10-28
+    source_url: https://github.blog/changelog/2026-10-28-ai-scan-for-repositories-in-public-preview/
+    learn_url: ""
+    sessions: []
+    what_changes: "An agentic scan of the latest commit on the default branch, covering languages CodeQL does not. Findings sit next to your CodeQL alerts."
+    do_monday: "Run it on one repository where CodeQL covers little, and compare its findings with your open alerts before you trust it."
+    verified_at: 2026-11-16
+
+  # Examples (render only with --examples)
+
   - id: example-sentinel-placeholder
     area: Microsoft Sentinel
     title: "Example row: a Sentinel feature in public preview"
