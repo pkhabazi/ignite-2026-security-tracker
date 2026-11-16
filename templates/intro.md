@@ -6,4 +6,4 @@ Every security announcement from Microsoft Ignite 2026 (17 to 20 November) in on
 
 **How status is verified.** The status (GA, public preview, preview, private preview, announced) is Microsoft's own wording in the primary source, never a recap or a third-party post. Preview means the source says preview without saying public or private. Announced means Microsoft named it without a preview or GA status, which includes dated retirements. Each row carries the date it was last checked against that source, and every link is checked before a release. When Microsoft changes a status, the row changes with it.
 
-**Not affiliated with Microsoft.** This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. Found a wrong status or a dead link? Open an issue with the source.
+**Not affiliated with Microsoft.** This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. If you find a wrong status or a dead link, open an issue with the source.

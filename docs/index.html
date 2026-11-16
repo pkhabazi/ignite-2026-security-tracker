@@ -62,7 +62,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <p><strong>What it covers.</strong> Agentic SOC and Security Copilot, Project Perception and MDASH, Microsoft Sentinel, Defender XDR and the Defender workloads, Defender for Cloud, security for AI, Entra, Purview and DevSecOps. One row per announcement: status, availability, the primary Microsoft source, the Learn page, related sessions, one line on what changes and one line on what I would do the Monday after.</p>
 <p><strong>The run-up.</strong> The tracker starts with what Microsoft shipped or announced in the months before Ignite, where it changes a tenant now or sets a date you have to plan for. Each row links the post it came from, so its date is in the source.</p>
 <p><strong>How status is verified.</strong> The status (GA, public preview, preview, private preview, announced) is Microsoft&#x27;s own wording in the primary source, never a recap or a third-party post. Preview means the source says preview without saying public or private. Announced means Microsoft named it without a preview or GA status, which includes dated retirements. Each row carries the date it was last checked against that source, and every link is checked before a release. When Microsoft changes a status, the row changes with it.</p>
-<p><strong>Not affiliated with Microsoft.</strong> This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. Found a wrong status or a dead link? Open an issue with the source.</p>
+<p><strong>Not affiliated with Microsoft.</strong> This is a personal tracker, maintained by Pouyan Khabazi. Product names belong to Microsoft. If you find a wrong status or a dead link, open an issue with the source.</p>
 </details>
 <p class="updated">Last updated 2026-11-16, 42 announcements.</p>
 </header>
@@ -90,7 +90,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <h3><a href="https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent">Security Alert Triage Agent extends from phishing to identity and cloud alerts</a></h3>
 <dl>
 <dt>What changes</dt><dd>The Phishing Triage Agent becomes the Security Alert Triage Agent and starts on a subset of identity and cloud alerts, containers first. Email triage stays GA.</dd>
-<dt>Do Monday</dt><dd>If you already run the phishing agent there is nothing to install. Compare its verdicts on container alerts with your analysts&#x27; for a week before you trust them.</dd>
+<dt>Do Monday</dt><dd>If you already run the phishing agent, there is nothing to install. Compare its verdicts on container alerts with your analysts&#x27; verdicts for a week before you rely on them.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
@@ -204,7 +204,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <h3><a href="https://learn.microsoft.com/en-us/defender-xdr/whats-new">Automatic attack disruption can isolate compromised devices</a></h3>
 <dl>
 <dt>What changes</dt><dd>When incident analysis marks a device as an active foothold, Defender isolates it from the network for a limited time and keeps it connected to security services.</dd>
-<dt>Do Monday</dt><dd>Agree with the owners of critical servers what happens when Defender isolates one of their machines, before it does.</dd>
+<dt>Do Monday</dt><dd>Agree with the owners of critical servers what happens when Defender isolates one of their machines.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption">Learn</a> <span aria-hidden="true">&middot;</span> Sessions: LTG1227, BRK333 <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
@@ -271,7 +271,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <p class="meta"><span class="status s-ann">Announced</span></p>
 <h3><a href="https://learn.microsoft.com/en-us/defender-for-identity/whats-new">Defender for Identity turns on sensor v3.x activation and Windows auditing by default</a></h3>
 <dl>
-<dt>What changes</dt><dd>Licensed tenants see a 30-day banner on Sensor management, then both settings switch on in a gradual rollout, also where they are set to Off.</dd>
+<dt>What changes</dt><dd>Licensed tenants see a 30-day banner on Sensor management, then both settings switch on in a gradual rollout, even where they are set to Off.</dd>
 <dt>Do Monday</dt><dd>Look for the banner on the Sensor management tab. Opt out during the notice period if auditing changes on your DCs need change approval first.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-for-identity/deploy/activate-sensor">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
@@ -295,7 +295,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <h3><a href="https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/cloud-security-billing-simplified-introducing-the-defender-workload-unit/4559743">Defender Workload Unit (DWU): one billing unit across Defender for Cloud plans</a></h3>
 <dl>
 <dt>What changes</dt><dd>Usage across workloads converts to one billing unit with one unit price and one place to estimate and track cost. Initial support is Azure only.</dd>
-<dt>Do Monday</dt><dd>Run the Cloud Security Cost Estimator against your current plans so you know what DWU means for your bill before it becomes the default.</dd>
+<dt>Do Monday</dt><dd>Run the Cloud Security Cost Estimator against your current plans so you know what DWU means for your bill.</dd>
 </dl>
 <p class="links">Verified 2026-11-16</p>
 </article>
@@ -345,7 +345,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <h3><a href="https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/">Dynamic Permissions, Dynamic Agent Risk and Dynamic Conditional Access for agents</a></h3>
 <dl>
 <dt>What changes</dt><dd>Task-scoped agent permissions under an org-wide ceiling, an agent risk score from identity, data, endpoint, cloud and network signals, and Conditional Access that acts on it.</dd>
-<dt>Do Monday</dt><dd>No status or docs yet. List which agents run with a user&#x27;s full permissions today; that is the list these controls are meant to shrink.</dd>
+<dt>Do Monday</dt><dd>No status or docs yet. List the agents that run with a user&#x27;s full permissions today.</dd>
 </dl>
 <p class="links">Verified 2026-11-16</p>
 </article>
@@ -436,7 +436,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <h3><a href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/a-next-step-in-the-evolution-of-the-microsoft-data-governance-strategy/4572227">Purview Data Governance retires; support ends 12 November 2027</a></h3>
 <dl>
 <dt>What changes</dt><dd>Data governance moves to Microsoft Fabric and the OneLake catalog. Purview stays focused on data security and compliance.</dd>
-<dt>Do Monday</dt><dd>If you depend on Purview data governance, list what relies on it. Regulated or contract-bound? Talk to your account team now, as Microsoft advises.</dd>
+<dt>Do Monday</dt><dd>If you depend on Purview data governance, list what relies on it. If you are regulated or bound by contract, talk to your account team now, as Microsoft advises.</dd>
 </dl>
 <p class="links">Verified 2026-11-16</p>
 </article>
@@ -476,7 +476,7 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <p class="meta"><span class="status s-pub">Public preview</span><span>Available 2026-10-28</span></p>
 <h3><a href="https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/">Code scanning for AI applications and agents</a></h3>
 <dl>
-<dt>What changes</dt><dd>Pull request scans flag indirect prompt injection, sensitive information disclosure and excessive agency in AI and agent code. Needs GHAS, not on GHES.</dd>
+<dt>What changes</dt><dd>Pull request scans flag indirect prompt injection, sensitive information disclosure and excessive agency in AI and agent code. Needs GHAS and runs on github.com only.</dd>
 <dt>Do Monday</dt><dd>Enable it on the repository of your most exposed agent and read the first findings with the developers who wrote it.</dd>
 </dl>
 <p class="links">Verified 2026-11-16</p>

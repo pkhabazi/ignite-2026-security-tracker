@@ -213,7 +213,7 @@ announcements:
     source_url: https://learn.microsoft.com/en-us/defender-for-identity/whats-new
     learn_url: https://learn.microsoft.com/en-us/defender-for-identity/deploy/activate-sensor
     sessions: []
-    what_changes: "Licensed tenants see a 30-day banner on Sensor management, then both settings switch on in a gradual rollout, also where they are set to Off."
+    what_changes: "Licensed tenants see a 30-day banner on Sensor management, then both settings switch on in a gradual rollout, even where they are set to Off."
     do_monday: "Look for the banner on the Sensor management tab. Opt out during the notice period if auditing changes on your DCs need change approval first."
     verified_at: 2026-11-16
 
@@ -252,7 +252,7 @@ announcements:
     learn_url: ""
     sessions: []
     what_changes: "Usage across workloads converts to one billing unit with one unit price and one place to estimate and track cost. Initial support is Azure only."
-    do_monday: "Run the Cloud Security Cost Estimator against your current plans so you know what DWU means for your bill before it becomes the default."
+    do_monday: "Run the Cloud Security Cost Estimator against your current plans so you know what DWU means for your bill."
     verified_at: 2026-11-16
 
   # Security for AI
@@ -278,7 +278,7 @@ announcements:
     learn_url: ""
     sessions: []
     what_changes: "Task-scoped agent permissions under an org-wide ceiling, an agent risk score from identity, data, endpoint, cloud and network signals, and Conditional Access that acts on it."
-    do_monday: "No status or docs yet. List which agents run with a user's full permissions today; that is the list these controls are meant to shrink."
+    do_monday: "No status or docs yet. List the agents that run with a user's full permissions today."
     verified_at: 2026-11-16
 
   - id: ai-defender-agent-threat-detection
@@ -402,7 +402,7 @@ announcements:
     learn_url: ""
     sessions: []
     what_changes: "Data governance moves to Microsoft Fabric and the OneLake catalog. Purview stays focused on data security and compliance."
-    do_monday: "If you depend on Purview data governance, list what relies on it. Regulated or contract-bound? Talk to your account team now, as Microsoft advises."
+    do_monday: "If you depend on Purview data governance, list what relies on it. If you are regulated or bound by contract, talk to your account team now, as Microsoft advises."
     verified_at: 2026-11-16
 
   - id: purview-data-risk-graph-retirement
@@ -451,7 +451,7 @@ announcements:
     source_url: https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/
     learn_url: ""
     sessions: []
-    what_changes: "Pull request scans flag indirect prompt injection, sensitive information disclosure and excessive agency in AI and agent code. Needs GHAS, not on GHES."
+    what_changes: "Pull request scans flag indirect prompt injection, sensitive information disclosure and excessive agency in AI and agent code. Needs GHAS and runs on github.com only."
     do_monday: "Enable it on the repository of your most exposed agent and read the first findings with the developers who wrote it."
     verified_at: 2026-11-16
 
@@ -502,7 +502,7 @@ announcements:
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/security-alert-triage-agent
     sessions: []
     what_changes: "The Phishing Triage Agent becomes the Security Alert Triage Agent and starts on a subset of identity and cloud alerts, containers first. Email triage stays GA."
-    do_monday: "If you already run the phishing agent there is nothing to install. Compare its verdicts on container alerts with your analysts' for a week before you trust them."
+    do_monday: "If you already run the phishing agent, there is nothing to install. Compare its verdicts on container alerts with your analysts' verdicts for a week before you rely on them."
     verified_at: 2026-11-16
 
   - id: isoc-playbook-generator
@@ -538,7 +538,7 @@ announcements:
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption
     sessions: [LTG1227, BRK333]
     what_changes: "When incident analysis marks a device as an active foothold, Defender isolates it from the network for a limited time and keeps it connected to security services."
-    do_monday: "Agree with the owners of critical servers what happens when Defender isolates one of their machines, before it does."
+    do_monday: "Agree with the owners of critical servers what happens when Defender isolates one of their machines."
     verified_at: 2026-11-16
 
   - id: mde-ai-agent-runtime-protection
