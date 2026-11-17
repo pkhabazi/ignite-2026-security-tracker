@@ -7,7 +7,7 @@
 #   id           lowercase slug, unique. Example rows start with "example-".
 #   area         one of:
 #                  Agentic SOC and Security Copilot
-#                  Project Perception and MDASH
+#                  Microsoft Perception and MDASH
 #                  Microsoft Sentinel
 #                  Defender XDR
 #                  Defender for Endpoint, Identity, Office, Cloud Apps
@@ -41,34 +41,34 @@ announcements:
 
   # Run-up to Ignite 2026: public items verified against their primary source on 2026-11-16.
 
-  # Project Perception and MDASH
+  # Microsoft Perception and MDASH
 
-  - id: perception-limited-public-preview
-    area: Project Perception and MDASH
-    title: "Project Perception, Microsoft's multi-agent security system, in limited public preview"
-    status: Public preview
-    available: 2026-08-03
-    source_url: https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/
+  - id: microsoft-perception
+    area: Microsoft Perception and MDASH
+    title: "Microsoft Perception, formerly Project Perception, generally available"
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/perception-blog/whats-new-with-microsoft-perception-at-ignite-2026/4571834
     learn_url: https://learn.microsoft.com/en-us/security/agentic-security/agentic-security-get-started
     sessions: [BRK323, BRK318, LTG1225]
-    what_changes: "A Perception area in the Defender portal where red, blue and green team agents work through playbooks with approval gates. Learn calls it limited and invitation only."
-    do_monday: "Watch BRK323, the Perception roadmap session. Outside the invitation-only preview, plan nothing around it yet."
-    verified_at: 2026-11-16
+    what_changes: "Red, blue and green team agents run through playbooks. The Triage Agent now covers about 80% of a typical Defender queue and handles AWS and Salesforce alerts."
+    do_monday: "Run the Triage Agent next to your analysts for a week. Microsoft's 80% is an aggregate across tenants, not a promised rate for yours."
+    verified_at: 2026-11-17
 
-  - id: mdash-limited-private-preview
-    area: Project Perception and MDASH
-    title: "Codename MDASH, a multi-model agentic vulnerability scanner, in limited private preview"
-    status: Private preview
-    available: ""
-    source_url: https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/
+  - id: codename-mdash
+    area: Microsoft Perception and MDASH
+    title: "Codename MDASH, Microsoft's agentic code security system, in preview"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
     learn_url: ""
     sessions: []
-    what_changes: "Agents across several models find, debate and prove exploitable bugs in code. Microsoft security engineering uses it and a small set of customers tests it."
-    do_monday: "If you own code security, sign up for the private preview from the announcement post and pick the one repository you would test it on."
-    verified_at: 2026-11-16
+    what_changes: "More than 100 agents map, scan, debate and validate code findings. New: repository sharding, fewer false positives, and MAI Cyber 1.1 Flash, with MAI-Cyber-2 to follow."
+    do_monday: "Preview is for eligible organizations. If you are one, start with a large repository and compare its validated findings with your CodeQL alerts."
+    verified_at: 2026-11-17
 
   - id: perception-guardian-agents-playbooks
-    area: Project Perception and MDASH
+    area: Microsoft Perception and MDASH
     title: "Guardian Agents and new Playbooks in Project Perception to secure AI agents"
     status: Announced
     available: ""
@@ -89,7 +89,7 @@ announcements:
     source_url: https://techcommunity.microsoft.com/blog/microsoftsentinelblog/manage-all-your-microsoft-sentinel-data-in-one-place-with-unified-data-managemen/4565940
     learn_url: https://learn.microsoft.com/en-us/azure/sentinel/manage-data-overview
     sessions: []
-    what_changes: "Connector health, ingestion, tables, transformations and retention in one place under Setup & configuration. Commercial cloud only."
+    what_changes: "Connector health, ingestion, tables, transformations and retention in one place under Setup & configuration, in the commercial cloud only."
     do_monday: "Check you have URBAC and the Data (manage) permission, then use the Overview tab to find the connectors that stopped sending."
     verified_at: 2026-11-16
 
@@ -131,17 +131,17 @@ announcements:
 
   # Defender XDR
 
-  - id: defender-isoc-public-preview
+  - id: defender-isoc
     area: Defender XDR
-    title: "ISOC: SIEM capabilities in Defender for E5, E7 and Defender Suite tenants"
-    status: Public preview
-    available: 2026-09-23
-    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/integrated-security-operations-center-in-microsoft-defender/4559097
+    title: "ISOC core capabilities in Defender generally available"
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/isoc-overview
-    sessions: [THR876, THR1016]
-    what_changes: "Cases, workbooks and playbook generation in Defender without a Sentinel workspace. Included retention goes from 30 to 90 days from 15 November 2026."
-    do_monday: "Check that Defender data retention now shows 90 days, since Learn still says 30. Then price the $2.40 per GB meter for the sources you want to add."
-    verified_at: 2026-11-16
+    sessions: [BRK324, THR876, THR1016]
+    what_changes: "Case management, playbooks, workbooks, UEBA, workspace creation and third-party ingestion are GA in Defender. Existing Sentinel customers can now opt in to ISOC."
+    do_monday: "If you run Sentinel today, opt a test tenant in to ISOC first and compare cases, workbooks and playbooks with what you run now."
+    verified_at: 2026-11-17
 
   - id: defender-identity-security-dashboard
     area: Defender XDR
@@ -271,15 +271,15 @@ announcements:
 
   - id: ai-dynamic-agent-controls
     area: Security for AI
-    title: "Dynamic Permissions, Dynamic Agent Risk and Dynamic Conditional Access for agents"
+    title: "Dynamic Permissions and Dynamic Conditional Access for agents"
     status: Announced
     available: ""
     source_url: https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
     learn_url: ""
     sessions: []
-    what_changes: "Task-scoped agent permissions under an org-wide ceiling, an agent risk score from identity, data, endpoint, cloud and network signals, and Conditional Access that acts on it."
+    what_changes: "Task-scoped agent permissions under an org-wide ceiling, and Conditional Access that narrows or blocks an agent's access as its risk changes."
     do_monday: "No status or docs yet. List the agents that run with a user's full permissions today."
-    verified_at: 2026-11-16
+    verified_at: 2026-11-17
 
   - id: ai-defender-agent-threat-detection
     area: Security for AI
@@ -374,7 +374,7 @@ announcements:
     available: 2026-11-04
     source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/scale-access-controls-with-microsoft-entra-conditional-access-policy-plans/4569647
     learn_url: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-plans
-    sessions: []
+    sessions: [BRK343]
     what_changes: "Group policies around one objective with shared conditions and per-rule controls. Existing policies keep enforcing; migrated rules start Off. Entra ID P1 or P2."
     do_monday: "Pick one cluster of policies that protect the same apps, migrate it to a plan, and run the new rules in report-only next to the old ones."
     verified_at: 2026-11-16
@@ -508,26 +508,26 @@ announcements:
   - id: isoc-playbook-generator
     area: Agentic SOC and Security Copilot
     title: "Playbook Generator: code-based playbooks from natural language in Defender"
-    status: Preview
-    available: ""
-    source_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
     sessions: []
-    what_changes: "Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. Part of ISOC automation."
+    what_changes: "Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. GA with the ISOC core."
     do_monday: "Generate one playbook for a response you now run by hand and review the code line by line. Microsoft says generated code needs manual validation."
-    verified_at: 2026-11-16
+    verified_at: 2026-11-17
 
   - id: defender-incident-cases
     area: Defender XDR
     title: "Incident cases replace the incident queue in the Defender portal"
-    status: Preview
-    available: ""
-    source_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
     sessions: []
-    what_changes: "Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident queue stays during the preview."
+    what_changes: "Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident experience remains available."
     do_monday: "Have one analyst work a shift from Cases > Incident, then update the runbooks that still point to the legacy queue."
-    verified_at: 2026-11-16
+    verified_at: 2026-11-17
 
   - id: disruption-device-isolation
     area: Defender XDR
@@ -543,15 +543,15 @@ announcements:
 
   - id: mde-ai-agent-runtime-protection
     area: Defender for Endpoint, Identity, Office, Cloud Apps
-    title: "AI agent runtime protection in Defender for Endpoint"
-    status: Preview
-    available: ""
-    source_url: https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview
+    title: "Runtime protection for local AI agents on Windows"
+    status: GA
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
     learn_url: https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-runtime-protection-overview
     sessions: [BRK340]
-    what_changes: "Defender inspects what enters and leaves a local agent's reasoning, catches prompt injection, and blocks the action before it runs where the inspection method allows it."
-    do_monday: "Check the support matrix for the agents your developers run, then turn it on in audit for a pilot group before you let it block."
-    verified_at: 2026-11-16
+    what_changes: "Agent-native protection for Claude Code, GitHub Copilot CLI and their VS Code extensions, network-based for Open Claw, Ollama and ChatGPT, on Windows, for MDE P2 customers."
+    do_monday: "Turn it on in Audit mode from Defender or Intune for your developer devices, review a week of detections, then switch to Block."
+    verified_at: 2026-11-17
 
   - id: foundry-agent-guardrails
     area: Security for AI
@@ -564,6 +564,300 @@ announcements:
     what_changes: "Guardrails scan user input, tool calls, tool responses and output. An agent's guardrail fully overrides the guardrail of its underlying model."
     do_monday: "List your Foundry agents and their guardrails, and check each agent's guardrail is at least as strict as its model's, since it replaces it."
     verified_at: 2026-11-16
+
+  # Ignite 2026 day 1 (17 November). Each row verified against its source on 2026-11-17.
+
+  # Microsoft Perception and MDASH
+
+  - id: perception-web-app-pen-test-agent
+    area: Microsoft Perception and MDASH
+    title: "Web App Pen Test Agent in Microsoft Perception"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Validates exploitable weaknesses in an authorized web application and gives evidence and remediation guidance through the Run web pen test and Protect web app playbooks."
+    do_monday: "Point it only at applications you are authorized to test. Start with one internet-facing app your team owns."
+    verified_at: 2026-11-17
+
+  - id: perception-posture-prioritization-agent
+    area: Microsoft Perception and MDASH
+    title: "Posture Prioritization Agent and the Plan for posture remediation playbook"
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/securityexposuremanagement/introducing-new-exposure-management-capabilities-in-microsoft-perception/4569977
+    learn_url: ""
+    sessions: []
+    what_changes: "Ranks posture risks on exploitability, reachability and asset criticality, explains each one, and turns the findings into an ordered remediation plan."
+    do_monday: "Run the playbook once and compare its ranking with the backlog your team works from now."
+    verified_at: 2026-11-17
+
+  - id: perception-risk-reduction-agent
+    area: Microsoft Perception and MDASH
+    title: "Risk Reduction Agent and the Reduce exposure risk playbook"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/securityexposuremanagement/introducing-new-exposure-management-capabilities-in-microsoft-perception/4569977
+    learn_url: ""
+    sessions: []
+    what_changes: "Turns a prioritized exposure into a plan: patch through Intune when a fix exists, or shield the vulnerability meanwhile, with human approval for critical actions."
+    do_monday: "Agree with your endpoint team who approves the Intune patching it proposes before you run it against production devices."
+    verified_at: 2026-11-17
+
+  - id: perception-secure-ai-agents-playbooks
+    area: Microsoft Perception and MDASH
+    title: "Perception playbooks to investigate and reduce AI agent risk"
+    status: Private preview
+    available: ""
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Perception and Microsoft 365 combine agent signals, context and registry data, and playbooks turn that view into prioritized remediation and response."
+    do_monday: "It is in private preview, so for now make sure your agents are in the Agent 365 registry, since that is the data these playbooks start from."
+    verified_at: 2026-11-17
+
+  - id: perception-ai-readiness-initiatives
+    area: Microsoft Perception and MDASH
+    title: "AI Readiness Initiatives in Microsoft Perception"
+    status: Announced
+    available: 2027-01
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Tracked programs for patching and vulnerability management, phishing-resistant admin sign-in and agent governance, measured on live tenant data, with a preview starting in January."
+    do_monday: "Nothing to switch on before January. Check where you stand in Secure Now, which these initiatives build on."
+    verified_at: 2026-11-17
+
+  # Microsoft Sentinel
+
+  - id: sentinel-ingest-time-normalization
+    area: Microsoft Sentinel
+    title: "Ingest-time normalization for security data"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "Data is standardized when it is ingested, through parser management, so detections, hunting and agents query one consistent shape."
+    do_monday: "Pick the source your detections parse most often at query time and test it with ingest-time normalization."
+    verified_at: 2026-11-17
+
+  # Defender XDR
+
+  - id: defender-isoc-siem-breadth-preview
+    area: Defender XDR
+    title: "ISOC preview expands to full SIEM breadth and 90 days of built-in Defender data"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: https://learn.microsoft.com/en-us/defender-xdr/isoc-overview
+    sessions: [THR876]
+    what_changes: "In preview: the full SIEM feature set, 90 days of built-in Defender data retention, SOC optimization, Content Hub, detections as code and automation audit logs."
+    do_monday: "If you rely on Content Hub or detections as code in Sentinel, test them in the ISOC preview before you plan any move."
+    verified_at: 2026-11-17
+
+  - id: defender-vulnerability-shielding
+    area: Defender XDR
+    title: "Vulnerability shielding: temporary protection for unpatched systems, on by default"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: [BRK333]
+    what_changes: "Applies targeted, temporary controls to vulnerable systems until the patch lands, and applies them on its own during an active attack."
+    do_monday: "It is on by default, so brief your server owners now and keep patching on schedule, since a shield is temporary."
+    verified_at: 2026-11-17
+
+  - id: defender-ti-zero-day-experience
+    area: Defender XDR
+    title: "Zero-day and emerging threats view in Defender threat intelligence"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Tags, a zero-day widget, a latest-threats view by industry and region, email alerts, and a Perception playbook that checks your coverage and writes detections."
+    do_monday: "Sign up for the zero-day email alerts and set the view to your industry and region."
+    verified_at: 2026-11-17
+
+  # Defender for Endpoint, Identity, Office, Cloud Apps
+
+  - id: mde-clickfix-blocking
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Detection and blocking of ClickFix copy-and-paste attacks"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "Defender detects and blocks browser lures that trick users into pasting and running malicious commands. Microsoft puts ClickFix at 12.8% of the intrusions it saw this year."
+    do_monday: "Microsoft gives no status yet. Look up which of your recent incidents started with a pasted command, so you know what this would catch."
+    verified_at: 2026-11-17
+
+  - id: mdo-teams-qr-code-protection
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Protection against malicious QR codes in Teams chats"
+    status: Public preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "Defender finds malicious URLs hidden in QR codes in Teams chats, blurs the content and shows a warning banner. No admin setup needed."
+    do_monday: "Show your analysts where these Teams detections land in advanced hunting and add them to the phishing runbook."
+    verified_at: 2026-11-17
+
+  - id: mdo-teams-deepfake-detection
+    area: Defender for Endpoint, Identity, Office, Cloud Apps
+    title: "Deepfake detection in Teams meetings through certified partners"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "Synthetic audio and video detection in Teams meetings from certified third-party providers, with detections in Defender. Availability varies by provider."
+    do_monday: "Only relevant if you use or plan to buy one of the participating providers. Ask yours when it reaches your tenant."
+    verified_at: 2026-11-17
+
+  # Security for AI
+
+  - id: ai-dynamic-agent-risk
+    area: Security for AI
+    title: "Dynamic Agent Risk in Agent 365"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753
+    learn_url: ""
+    sessions: []
+    what_changes: "One risk level per agent from identity, access, data and activity, updated as the agent changes, with Check Point, Cyera, Darktrace and Zenity signals through Sentinel."
+    do_monday: "If you use one of those four vendors, ask when their agent-risk connector for Sentinel reaches you."
+    verified_at: 2026-11-17
+
+  - id: ai-agent-posture-third-party-platforms
+    area: Security for AI
+    title: "Posture assessment for Bedrock, Gemini, Vertex AI and Claude agents"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "Agents on Amazon Bedrock, Google Gemini, Google Vertex AI and Anthropic Claude join the Defender AI agent inventory with risk assessments and recommendations."
+    do_monday: "Connect those platforms to Agent 365 through connected platforms so their agents come into scope."
+    verified_at: 2026-11-17
+
+  - id: ai-device-code-phishing-github
+    area: Security for AI
+    title: "Detection and disruption of device code phishing against GitHub accounts behind AI agents"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    learn_url: ""
+    sessions: []
+    what_changes: "New Defender detections for device code phishing that takes over a developer's GitHub account to misuse Copilot CLI, with disruption that disables it and revokes sessions."
+    do_monday: "Read Microsoft's research post on this attack and review which GitHub OAuth authorizations your developers have approved."
+    verified_at: 2026-11-17
+
+  - id: intune-unsanctioned-agent-compliance
+    area: Security for AI
+    title: "Intune software compliance policy for unsanctioned AI agents"
+    status: Public preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoftintuneblog/what%E2%80%99s-new-in-microsoft-intune-at-ignite/4570003
+    learn_url: ""
+    sessions: []
+    what_changes: "Mark Windows devices running specified unsanctioned agents as noncompliant and use Conditional Access to block them from corporate resources."
+    do_monday: "Agree which local agents are sanctioned before you write the policy, then run the Conditional Access side in report-only first."
+    verified_at: 2026-11-17
+
+  # Entra
+
+  - id: entra-agent-id-local-agents
+    area: Entra
+    title: "Entra Agent ID for discovered local agents"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-entra-helps-you-stay-ahead-/4556456
+    learn_url: ""
+    sessions: [BRK343]
+    what_changes: "Local agents found by Defender and Global Secure Access, 60 types including Claude Code, OpenAI Codex and GitHub Copilot CLI, each get an Agent ID you can govern."
+    do_monday: "Check which local agents Defender already sees in your tenant. Those are the identities that will show up."
+    verified_at: 2026-11-17
+
+  - id: entra-mcp-server-for-enterprise
+    area: Entra
+    title: "Microsoft MCP Server for Enterprise"
+    status: GA
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-entra-helps-you-stay-ahead-/4556456
+    learn_url: ""
+    sessions: [BRK343]
+    what_changes: "AI tools and agents query Entra, Purview and Intune data in natural language through a permissions-based MCP server."
+    do_monday: "Decide who may connect an AI client to it and with which permissions before someone connects one without asking."
+    verified_at: 2026-11-17
+
+  - id: entra-gsa-mcp-firewall
+    area: Entra
+    title: "MCP firewall in Global Secure Access"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-entra-helps-you-stay-ahead-/4556456
+    learn_url: ""
+    sessions: []
+    what_changes: "Policies for agent traffic to MCP servers, down to tools, resources, methods, protocol versions and connection security."
+    do_monday: "List the MCP servers your agents call today and start the policy from that list."
+    verified_at: 2026-11-17
+
+  - id: entra-gsa-agentic-traffic-acquisition
+    area: Entra
+    title: "Agentic traffic acquisition in Global Secure Access"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-entra-helps-you-stay-ahead-/4556456
+    learn_url: ""
+    sessions: []
+    what_changes: "Acquire only agent traffic for visibility and network controls while you keep your current SASE product. The Book of News calls it GA; the Entra post says preview."
+    do_monday: "If you run another SASE product, pilot this on one group to see how the two split agent traffic."
+    verified_at: 2026-11-17
+
+  # Purview
+
+  - id: purview-copilot-dlp-unlabeled-files
+    area: Purview
+    title: "DLP for Copilot blocks sensitive files even when they are unlabeled"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Copilot is blocked from referencing files with sensitive information even without a label, and prompt protection covers attachments, linked files and text."
+    do_monday: "Pilot it with a group that can reach sensitive but unlabeled sites and check what Copilot can no longer reference."
+    verified_at: 2026-11-17
+
+  - id: purview-endpoint-agent-data-security
+    area: Purview
+    title: "Purview data security for AI agents on Windows endpoints"
+    status: Preview
+    available: 2026-11-17
+    source_url: https://news.microsoft.com/events/ignite/2026/book-of-news/
+    learn_url: ""
+    sessions: []
+    what_changes: "Control what data local AI agents on Windows can access and share, per agent or group of agents, including through their connections to other tools."
+    do_monday: "Start with one group of agents your developers run and audit what data they reach before you block anything."
+    verified_at: 2026-11-17
+
+  # Other
+
+  - id: onprem-baseline-security-mode
+    area: Other
+    title: "On-Premises Baseline Security Mode for Exchange, SharePoint and Skype for Business Server"
+    status: Announced
+    available: ""
+    source_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/new-investments-to-reduce-on-premises-security-risk/4570381
+    learn_url: ""
+    sessions: []
+    what_changes: "Secure defaults from deployment, faster security updates and temporary protections against emerging threats, rolling out over time per product."
+    do_monday: "Check which Exchange servers miss the current security update or run unsupported versions. Microsoft's own data says many do."
+    verified_at: 2026-11-17
 
   # Examples (render only with --examples)
 

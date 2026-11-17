@@ -18,7 +18,7 @@ TITLE = "Ignite 2026 security tracker"
 # Order here is the order of the sections in README.md and docs/index.html.
 AREAS = [
     "Agentic SOC and Security Copilot",
-    "Project Perception and MDASH",
+    "Microsoft Perception and MDASH",
     "Microsoft Sentinel",
     "Defender XDR",
     "Defender for Endpoint, Identity, Office, Cloud Apps",

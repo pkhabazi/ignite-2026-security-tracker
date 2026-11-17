@@ -1,6 +1,6 @@
 Every security announcement from Microsoft Ignite 2026 (17 to 20 November) in one place, written for the people who run Defender, Sentinel, Entra and Purview day to day. The Book of News, the blog posts and the sessions each tell part of the story. What I need is the part that changes a tenant, and what to do about it on Monday.
 
-**What it covers.** Agentic SOC and Security Copilot, Project Perception and MDASH, Microsoft Sentinel, Defender XDR and the Defender workloads, Defender for Cloud, security for AI, Entra, Purview and DevSecOps. One row per announcement: status, availability, the primary Microsoft source, the Learn page, related sessions, one line on what changes and one line on what I would do the Monday after.
+**What it covers.** Agentic SOC and Security Copilot, Microsoft Perception and MDASH, Microsoft Sentinel, Defender XDR and the Defender workloads, Defender for Cloud, security for AI, Entra, Purview and DevSecOps. One row per announcement: status, availability, the primary Microsoft source, the Learn page, related sessions, one line on what changes and one line on what I would do the Monday after.
 
 **The run-up.** The tracker starts with what Microsoft shipped or announced in the months before Ignite, where it changes a tenant now or sets a date you have to plan for. Each row links the post it came from, so its date is in the source.
 
