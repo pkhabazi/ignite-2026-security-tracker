@@ -69,21 +69,21 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <main>
 <form class="filters" id="filters" hidden onsubmit="return false">
 <label for="f-area">Area<select id="f-area"><option value="">All areas (65)</option><option value="agentic-soc-and-security-copilot">Agentic SOC and Security Copilot (2)</option><option value="microsoft-perception-and-mdash">Microsoft Perception and MDASH (8)</option><option value="microsoft-sentinel">Microsoft Sentinel (5)</option><option value="defender-xdr">Defender XDR (8)</option><option value="defender-for-endpoint-identity-office-cloud-apps">Defender for Endpoint, Identity, Office, Cloud Apps (9)</option><option value="defender-for-cloud">Defender for Cloud (2)</option><option value="security-for-ai">Security for AI (9)</option><option value="entra">Entra (10)</option><option value="purview">Purview (5)</option><option value="devsecops">DevSecOps (6)</option><option value="other">Other (1)</option></select></label>
-<label for="f-status">Status<select id="f-status"><option value="">All statuses (65)</option><option value="ga">GA (21)</option><option value="public-preview">Public preview (12)</option><option value="preview">Preview (17)</option><option value="private-preview">Private preview (1)</option><option value="announced">Announced (14)</option></select></label>
+<label for="f-status">Status<select id="f-status"><option value="">All statuses (65)</option><option value="ga">GA (19)</option><option value="public-preview">Public preview (12)</option><option value="preview">Preview (19)</option><option value="private-preview">Private preview (1)</option><option value="announced">Announced (14)</option></select></label>
 <p id="count" aria-live="polite"></p>
 <button type="button" id="f-clear">Show all</button>
 </form>
 <section class="area" data-area="agentic-soc-and-security-copilot" aria-labelledby="h-agentic-soc-and-security-copilot">
 <h2 id="h-agentic-soc-and-security-copilot">Agentic SOC and Security Copilot</h2>
 <div class="cards">
-<article class="row" id="isoc-playbook-generator" data-area="agentic-soc-and-security-copilot" data-status="ga">
-<p class="meta"><span class="status s-ga">GA</span><span>Available 2026-11-17</span></p>
-<h3><a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975">Playbook Generator: code-based playbooks from natural language in Defender</a></h3>
+<article class="row" id="isoc-playbook-generator" data-area="agentic-soc-and-security-copilot" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation">Playbook Generator: code-based playbooks from natural language in Defender</a></h3>
 <dl>
-<dt>What changes</dt><dd>Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. GA with the ISOC core.</dd>
+<dt>What changes</dt><dd>Describe a workflow and get a code-based playbook to review, test and activate. Playbooks went GA with the ISOC core on 17 November; no page gives the generator a new status.</dd>
 <dt>Do Monday</dt><dd>Generate one playbook for a response you now run by hand and review the code line by line. Microsoft says generated code needs manual validation.</dd>
 </dl>
-<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-17</p>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
 <article class="row" id="triage-agent-identity-cloud-alerts" data-area="agentic-soc-and-security-copilot" data-status="preview">
 <p class="meta"><span class="status s-pub">Preview</span></p>
@@ -235,15 +235,6 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/identity-security/coverage-maturity">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
-<article class="row" id="defender-incident-cases" data-area="defender-xdr" data-status="ga">
-<p class="meta"><span class="status s-ga">GA</span><span>Available 2026-11-17</span></p>
-<h3><a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975">Incident cases replace the incident queue in the Defender portal</a></h3>
-<dl>
-<dt>What changes</dt><dd>Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident experience remains available.</dd>
-<dt>Do Monday</dt><dd>Have one analyst work a shift from Cases &gt; Incident, then update the runbooks that still point to the legacy queue.</dd>
-</dl>
-<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-17</p>
-</article>
 <article class="row" id="defender-isoc" data-area="defender-xdr" data-status="ga">
 <p class="meta"><span class="status s-ga">GA</span><span>Available 2026-11-17</span></p>
 <h3><a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975">ISOC core capabilities in Defender generally available</a></h3>
@@ -270,6 +261,15 @@ footer{border-top:1px solid var(--border);margin-top:2rem;padding:1rem 0 2rem;fo
 <dt>Do Monday</dt><dd>Agree with the owners of critical servers what happens when Defender isolates one of their machines.</dd>
 </dl>
 <p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption">Learn</a> <span aria-hidden="true">&middot;</span> Sessions: LTG1227, BRK333 <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
+</article>
+<article class="row" id="defender-incident-cases" data-area="defender-xdr" data-status="preview">
+<p class="meta"><span class="status s-pub">Preview</span></p>
+<h3><a href="https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases">Incident cases replace the incident queue in the Defender portal</a></h3>
+<dl>
+<dt>What changes</dt><dd>Incident cases are the recommended way to work incidents, with priority score, ownership and due date. Case management went GA with the ISOC core; no page says so for incident cases.</dd>
+<dt>Do Monday</dt><dd>Have one analyst work a shift from Cases &gt; Incident, then update the runbooks that still point to the legacy queue.</dd>
+</dl>
+<p class="links"><a href="https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases">Learn</a> <span aria-hidden="true">&middot;</span> Verified 2026-11-16</p>
 </article>
 <article class="row" id="defender-isoc-siem-breadth-preview" data-area="defender-xdr" data-status="preview">
 <p class="meta"><span class="status s-pub">Preview</span><span>Available 2026-11-17</span></p>

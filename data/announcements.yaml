@@ -508,26 +508,26 @@ announcements:
   - id: isoc-playbook-generator
     area: Agentic SOC and Security Copilot
     title: "Playbook Generator: code-based playbooks from natural language in Defender"
-    status: GA
-    available: 2026-11-17
-    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/siem-defender-automation
     sessions: []
-    what_changes: "Describe a workflow and get a code-based playbook to review, test and activate, with integration profiles for Microsoft and third-party APIs. GA with the ISOC core."
+    what_changes: "Describe a workflow and get a code-based playbook to review, test and activate. Playbooks went GA with the ISOC core on 17 November; no page gives the generator a new status."
     do_monday: "Generate one playbook for a response you now run by hand and review the code line by line. Microsoft says generated code needs manual validation."
-    verified_at: 2026-11-17
+    verified_at: 2026-11-16
 
   - id: defender-incident-cases
     area: Defender XDR
     title: "Incident cases replace the incident queue in the Defender portal"
-    status: GA
-    available: 2026-11-17
-    source_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975
+    status: Preview
+    available: ""
+    source_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
     learn_url: https://learn.microsoft.com/en-us/defender-xdr/prioritize-incident-cases
     sessions: []
-    what_changes: "Incident cases are the recommended way to work incidents, with priority score, ownership and due date. The legacy incident experience remains available."
+    what_changes: "Incident cases are the recommended way to work incidents, with priority score, ownership and due date. Case management went GA with the ISOC core; no page says so for incident cases."
     do_monday: "Have one analyst work a shift from Cases > Incident, then update the runbooks that still point to the legacy queue."
-    verified_at: 2026-11-17
+    verified_at: 2026-11-16
 
   - id: disruption-device-isolation
     area: Defender XDR
